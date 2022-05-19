@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#F5F5F5</color>
+    <color name="black">#283137</color>
+    <color name="blue">#1189DF</color>
+    <color name="green">#70CCA6</color>
+    <color name="red">#DA6161</color>
+    <color name="yellow">#F4C872</color>
+
+    <color name="primary">@color/black</color>
+    <color name="accent">@color/blue</color>
+    <color name="error">@color/red</color>
+    <color name="success">@color/green</color>
+    <color name="warning">@color/yellow</color>
+    <color name="onPrimary">@color/white</color>
+</resources>
