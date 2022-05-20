@@ -3,14 +3,29 @@
     <color name="white">#F5F5F5</color>
     <color name="black">#283137</color>
     <color name="blue">#1189DF</color>
-    <color name="green">#70CCA6</color>
+    <color name="blueDark">#0F71B7</color>
+    <color name="green">#4ADC8D</color>
+    <color name="greenDark">#35B570</color>
     <color name="red">#DA6161</color>
     <color name="yellow">#F4C872</color>
+    <color name="gray">#989898</color>
+    <color name="grayLight">#DCDCDC</color>
+    <color name="grayDark">#605F5F</color>
 
-    <color name="primary">@color/black</color>
+    <color name="primary">@color/blue</color>
+    <color name="primaryDark">@color/blueDark</color>
+    <color name="primaryVariant">@color/blue</color>
+    <color name="primaryDisabled">@color/gray</color>
+    <color name="secondary">@color/white</color>
+    <color name="secondaryDark">@color/gray</color>
+    <color name="secondaryVariant">@color/secondary</color>
+    <color name="secondaryDisabled">@color/grayLight</color>
     <color name="accent">@color/blue</color>
     <color name="error">@color/red</color>
     <color name="success">@color/green</color>
     <color name="warning">@color/yellow</color>
     <color name="onPrimary">@color/white</color>
+    <color name="onPrimaryDark">@color/grayLight</color>
+    <color name="onSecondary">@color/black</color>
+    <color name="onSecondaryDark">@color/black</color>
 </resources>

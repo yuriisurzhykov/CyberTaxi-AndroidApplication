@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">CyberTaxi-AndroidApplication</string>
+    <string name="app_name">Cyber Taxi</string>
+    <string name="label_login_phone_input_description">Enter your phone number to login or register</string>
+    <string name="hint_phone_input">XX-XXX-XX-XX</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="button_next">Next</string>
 </resources>

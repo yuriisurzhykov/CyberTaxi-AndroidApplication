@@ -23,10 +23,12 @@ android {
     productFlavors {
         create("passenger") {
             dimension = "product"
+            applicationId = "com.cybertaxi.mobile"
         }
 
         create("driver") {
             dimension = "product"
+            applicationId = "com.cybertaxi.driver"
         }
     }
 

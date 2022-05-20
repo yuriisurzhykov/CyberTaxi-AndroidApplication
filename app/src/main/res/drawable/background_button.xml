@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <inset android:insetLeft="2dp" android:insetTop="2dp" android:insetRight="2dp" android:insetBottom="2dp">
+            <shape>
+                <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                <solid android:color="@color/primaryDisabled" />
+                <stroke android:width="2dp" android:color="@color/primaryDisabled" />
+                <corners android:radius="22dp" />
+            </shape>
+        </inset>
+    </item>
+    <item android:state_pressed="true">
+        <inset android:insetLeft="2dp" android:insetTop="2dp" android:insetRight="2dp" android:insetBottom="2dp">
+            <shape>
+                <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                <solid android:color="@color/primaryDark" />
+                <stroke android:width="2dp" android:color="@color/primaryDark" />
+                <corners android:radius="22dp" />
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset android:insetLeft="2dp" android:insetTop="2dp" android:insetRight="2dp" android:insetBottom="2dp">
+            <shape>
+                <padding android:bottom="6dp" android:left="16dp" android:right="16dp" android:top="6dp" />
+                <solid android:color="@color/primary" />
+                <stroke android:width="2dp" android:color="@color/primary" />
+                <corners android:radius="22dp" />
+            </shape>
+        </inset>
+    </item>
+</selector>
