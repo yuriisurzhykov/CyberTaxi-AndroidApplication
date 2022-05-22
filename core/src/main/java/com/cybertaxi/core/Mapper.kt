@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.core
+package com.cybertaxi.core
 
 interface Mapper<I, O> {
     fun map(input: I): O

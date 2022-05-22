@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.presentation.base.list
+package com.cybertaxi.core.list
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

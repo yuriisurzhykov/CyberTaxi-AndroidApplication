@@ -1,8 +1,8 @@
 object ProjectDepsProvider : DependenciesProvider {
     override fun dependenciesList(): List<String> {
         return arrayListOf(
-            Deps.SDK.androidCore,
-            Deps.SDK.kotlin,
+            Deps.Core.androidCore,
+            Deps.Core.kotlin,
             Deps.Domain.lifecycle,
             Deps.Domain.kotlinSerialization,
             Deps.Domain.retrofit,
@@ -52,5 +52,11 @@ object ProjectAndroidTestDepsProvider : DependenciesProvider {
 object ProjectPlatformDepsProvider : DependenciesProvider {
     override fun dependenciesList(): List<String> {
         return arrayListOf(Platform.googleBoom)
+    }
+}
+
+object LocalProjectsProvider: DependenciesProvider {
+    override fun dependenciesList(): List<String> {
+        return arrayListOf(":uiComponents", ":core")
     }
 }

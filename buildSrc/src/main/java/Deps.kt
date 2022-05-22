@@ -1,12 +1,15 @@
 object Deps {
 
-    object SDK {
+    object Core {
         val androidCore by lazy { "androidx.core:core-ktx:${Versions.androidCore}" }
         val kotlin by lazy { "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}" }
+        val coroutinesCore by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}" }
+        val coroutinesAndroid by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}" }
     }
 
     object Domain {
         val lifecycle by lazy { "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}" }
+        val viewModel by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewModel}" }
         val room by lazy { "androidx.room:room-runtime:${Versions.room}" }
         val roomExtensions by lazy { "androidx.room:room-ktx:${Versions.room}" }
         val workManager by lazy { "androidx.work:work-runtime-ktx:${Versions.workManager}" }

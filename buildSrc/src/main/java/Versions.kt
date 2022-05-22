@@ -1,5 +1,6 @@
 object Versions {
     val kotlin by lazy { "1.6.0" }
+    val coroutines by lazy { "1.6.1" }
     val kotlinSerialization by lazy { "1.3.3" }
     val timber by lazy { "4.7.1" }
     val appCompat by lazy { "1.4.1" }
@@ -10,6 +11,7 @@ object Versions {
     val retrofit by lazy { "2.9.0" }
     val okio by lazy { "3.1.0" }
     val lifecycle by lazy { "2.2.0" }
+    val viewModel by lazy { "2.4.1" }
     val navigation by lazy { "2.4.2" }
     val workManager by lazy { "2.7.1" }
     val preferences by lazy { "1.2.0" }

@@ -55,4 +55,5 @@ dependencies {
     testImplementation(ProjectTestDepsProvider)
     androidTestImplementation(ProjectAndroidTestDepsProvider)
     platformImplementation(ProjectPlatformDepsProvider)
+    projectImplementation(LocalProjectsProvider)
 }

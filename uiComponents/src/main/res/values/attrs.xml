@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CodeInputEditText">
+        <attr name="codeEntryCount" format="integer" />
+        <attr name="cellColors" format="color" />
+        <attr name="outlineColors" format="color" />
+        <attr name="errorColor" format="color" />
+        <attr name="outlineStrokeWidth" format="dimension" />
+        <attr name="resetErrorOnChangeText" format="boolean" />
+    </declare-styleable>
+</resources>

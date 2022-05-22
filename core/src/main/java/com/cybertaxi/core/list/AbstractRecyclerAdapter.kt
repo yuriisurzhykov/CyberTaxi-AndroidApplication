@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.presentation.base.list
+package com.cybertaxi.core.list
 
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView

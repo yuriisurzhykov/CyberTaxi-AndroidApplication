@@ -1,7 +1,7 @@
 object BuildPlugins {
 
     object Configs {
-        val kotlin by lazy { "1.5.31" }
+        val kotlin by lazy { "1.6.21" }
         val buildToolsVersion by lazy { "7.0.0" }
     }
 

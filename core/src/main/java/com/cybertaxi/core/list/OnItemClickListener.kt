@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.presentation.base.list
+package com.cybertaxi.core.list
 
 fun interface OnItemClickListener<T> {
 
