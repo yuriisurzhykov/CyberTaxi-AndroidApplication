@@ -27,13 +27,19 @@
 
     </style>
 
+    <style name="TextStyle.Message" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:gravity">center</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">@integer/font_weight_medium</item>
+    </style>
+
     <style name="TextStyle.Description" parent="TextAppearance.AppCompat.Menu">
         <item name="android:textFontWeight" tools:ignore="NewApi">@integer/font_weight_semibold
         </item>
         <item name="android:textColor">@color/grayDark</item>
+        <item name="android:padding">@dimen/default_padding</item>
     </style>
 
-    <style name="TextStyleSemibold" parent="TextAppearance.AppCompat.Body2">
+    <style name="TextStyle.Semibold" parent="TextAppearance.AppCompat.Body2">
 
     </style>
 

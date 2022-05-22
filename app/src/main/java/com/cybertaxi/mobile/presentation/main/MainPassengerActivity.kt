@@ -8,6 +8,6 @@ class MainPassengerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_login)
+        setContentView(R.layout.fragment_code_input)
     }
 }

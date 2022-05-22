@@ -1,5 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
 
     <style name="Theme.Splash" parent="Theme.Mobile">
         <item name="android:windowTranslucentStatus">true</item>
@@ -7,9 +6,12 @@
         <item name="android:navigationIcon">@drawable/ic_side_menu</item>
     </style>
 
-    <style name="Theme.Mobile" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+    <style name="Theme.Mobile" parent="Theme.Mobile.Base" />
+
+    <style name="Theme.Mobile.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryInverse">@color/grayDark</item>
         <item name="colorPrimaryVariant">@color/primaryVariant</item>
         <item name="colorOnPrimary">@color/onPrimary</item>
         <!-- Secondary brand color. -->
@@ -23,5 +25,6 @@
         <item name="android:fontFamily">@font/commissioner</item>
         <item name="android:colorControlActivated">@color/primary</item>
         <item name="buttonStyle">@style/Button</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
     </style>
 </resources>

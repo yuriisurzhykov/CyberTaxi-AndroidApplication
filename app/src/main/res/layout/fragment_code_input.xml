@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/code_input_description"
+        style="@style/TextStyle.Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/label_code_input_description" />
+
+    <com.cybertaxi.uicomponents.codeinpnut.CodeInputEditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textColor="?colorPrimaryDark"
+        android:textSize="@dimen/text_size_huge"
+        app:cellColors="@color/code_input_colors"
+        app:codeEntryCount="@integer/code_input_digits"
+        app:errorColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/code_input_description"
+        app:outlineColors="@color/code_input_outline"
+        app:outlineStrokeWidth="2dp" />
+
+    <ImageView
+        android:id="@+id/resend_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_padding"
+        android:src="@drawable/ic_resend"
+        app:layout_constraintBottom_toTopOf="@id/not_receive_code_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_horizontal_margin"
+        android:layout_marginEnd="@dimen/content_horizontal_margin"
+        android:layout_marginBottom="@dimen/content_vertical_margin"
+        app:constraint_referenced_ids="not_receive_code_label,button_resend_code"
+        app:layout_constraintBottom_toTopOf="@id/next_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/not_receive_code_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:text="@string/label_not_received_code" />
+
+    <TextView
+        android:id="@+id/button_resend_code"
+        style="@style/ActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_resend_code" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:text="@string/button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
