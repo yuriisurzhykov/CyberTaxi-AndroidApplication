@@ -7,7 +7,7 @@ abstract class AbstractViewHolder<T>(view: View) : RecyclerView.ViewHolder(view)
 
     private var item: T? = null
     private var onItemClickListener: OnItemClickListener<T>? = null
-    private val internalClickListener = View.OnClickListener { view ->
+    private val internalClickListener = View.OnClickListener {
         item?.let { item -> onItemClickListener?.onItemClick(item) }
     }
 

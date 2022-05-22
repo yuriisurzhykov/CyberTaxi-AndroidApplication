@@ -18,12 +18,16 @@
     <dimen name="small_padding">10dp</dimen>
     <dimen name="small_icon_padding">4dp</dimen>
 
+    <dimen name="big_margin">24dp</dimen>
+    <dimen name="large_margin">36dp</dimen>
+    <dimen name="huge_margin">48dp</dimen>
+
     <dimen name="default_text_size">18sp</dimen>
     <dimen name="default_toolbar_text_size">20sp</dimen>
     <dimen name="title_text_size">24sp</dimen>
     <dimen name="subtitle_text_size">22sp</dimen>
     <dimen name="text_size_title">20sp</dimen>
-    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="text_size_button">18sp</dimen>
     <dimen name="text_size_tabs">14sp</dimen>
     <dimen name="text_size_list_title">16sp</dimen>
     <dimen name="text_size_text_input">16sp</dimen>

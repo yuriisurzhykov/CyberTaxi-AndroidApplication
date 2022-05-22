@@ -9,4 +9,8 @@
     <string name="label_code_input_description">Enter the code we\'ve sent by SMS to the number: \%s</string>
     <string name="label_not_received_code">Haven’t receive the SMS?</string>
     <string name="button_resend_code">Resend code</string>
+    <string name="message_profile_edit">Fill the data about yourself</string>
+    <string name="label_firstname_input_description">Your first name</string>
+    <string name="label_second_name_input_description">Your second name</string>
+    <string name="label_birthday_input_description">Your birthday</string>
 </resources>

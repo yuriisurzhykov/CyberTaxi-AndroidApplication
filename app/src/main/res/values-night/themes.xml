@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Mobile" parent="Theme.Mobile.Base">
-        <!-- Primary brand color. -->
         <item name="colorPrimaryInverse">@color/onPrimary</item>
+        <item name="codeInputBackground">@color/grayDark</item>
     </style>
 </resources>
