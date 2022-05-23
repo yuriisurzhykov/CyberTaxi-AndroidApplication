@@ -30,6 +30,16 @@
 
     <style name="TextStyle.InputFieldDescription" parent="TextAppearance.AppCompat.Menu"></style>
 
+    <style name="TextStyle.FilledLabel" parent="TextAppearance.AppCompat.Menu">
+        <item name="android:background">@drawable/background_text_label</item>
+        <item name="android:textColor">@color/onPrimary</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextStyle.Money" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextStyle.Message" parent="TextAppearance.AppCompat.Headline">
         <item name="android:gravity">center</item>
         <item name="android:textFontWeight" tools:ignore="NewApi">@integer/font_weight_medium</item>
