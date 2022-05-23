@@ -17,8 +17,10 @@
 
     <dimen name="small_padding">10dp</dimen>
     <dimen name="small_icon_padding">4dp</dimen>
+    <dimen name="small_corner_radius">4dp</dimen>
 
     <dimen name="big_margin">24dp</dimen>
+    <dimen name="big_corner_radius">16dp</dimen>
     <dimen name="large_margin">36dp</dimen>
     <dimen name="huge_margin">48dp</dimen>
 
@@ -31,6 +33,7 @@
     <dimen name="text_size_tabs">14sp</dimen>
     <dimen name="text_size_list_title">16sp</dimen>
     <dimen name="text_size_text_input">16sp</dimen>
+    <dimen name="text_size_big">24sp</dimen>
     <dimen name="text_size_huge">32sp</dimen>
 
 </resources>

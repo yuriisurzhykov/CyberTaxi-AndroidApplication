@@ -16,6 +16,10 @@
         <item name="android:colorPrimary">@color/accent</item>
     </style>
 
+    <style name="TextStyle.DangerActive" parent="ActiveText">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
     <style name="TextStyle.Logo" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textSize">@dimen/text_size_huge</item>
         <item name="android:textFontWeight" tools:targetApi="p">@integer/font_weight_bold</item>
@@ -53,7 +57,7 @@
     </style>
 
     <style name="TextStyle.Semibold" parent="TextAppearance.AppCompat.Body2">
-
+        <item name="android:textSize">@dimen/text_size_title</item>
     </style>
 
     <style name="ToolbarTransparent" parent="Theme.AppCompat.Light.DarkActionBar">
