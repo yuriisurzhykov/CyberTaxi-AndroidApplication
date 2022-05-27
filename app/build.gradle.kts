@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
     kotlin("plugin.serialization") version "1.6.10"
 }
 
@@ -49,6 +50,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     kapt(ProjectKaptProvider)
     implementation(ProjectDepsProvider)
@@ -56,4 +61,5 @@ dependencies {
     androidTestImplementation(ProjectAndroidTestDepsProvider)
     platformImplementation(ProjectPlatformDepsProvider)
     projectImplementation(LocalProjectsProvider)
+    implementation(kotlin("reflect"))
 }

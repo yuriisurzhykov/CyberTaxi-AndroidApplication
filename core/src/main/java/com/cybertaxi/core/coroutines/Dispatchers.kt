@@ -1,6 +1,7 @@
 package com.cybertaxi.core.coroutines
 
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
 interface Dispatchers {
 
@@ -29,5 +30,5 @@ interface Dispatchers {
             withContext(ui, block = block)
     }
 
-    class Base : Abstract(kotlinx.coroutines.Dispatchers.Main, kotlinx.coroutines.Dispatchers.IO)
+    class Base @Inject constructor() : Abstract(kotlinx.coroutines.Dispatchers.Main, kotlinx.coroutines.Dispatchers.IO)
 }

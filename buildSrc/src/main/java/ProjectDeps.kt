@@ -13,6 +13,7 @@ object ProjectDepsProvider : DependenciesProvider {
             Deps.UI.fragments,
             Deps.UI.activities,
             Deps.DI.dagger,
+            Deps.DI.hilt,
             Deps.UI.material,
             Deps.UI.appCompat,
             Deps.UI.constraintLayout
@@ -33,7 +34,9 @@ object ProjectKaptProvider : DependenciesProvider {
         return arrayListOf(
             Kapt.room,
             Kapt.dagger,
-            Kapt.lifecycle
+            Kapt.daggerProcessor,
+            Kapt.lifecycle,
+            Kapt.hilt
         )
     }
 }

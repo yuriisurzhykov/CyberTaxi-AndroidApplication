@@ -5,7 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cybertaxi.core.coroutines.AsyncLoader
 import com.cybertaxi.core.coroutines.Dispatchers
+import com.cybertaxi.uicomponents.views.Visibility
 import kotlinx.coroutines.CoroutineScope
+import javax.inject.Inject
 
 abstract class AbstractSubscribeViewModel<T : IView>
 constructor(protected val dispatchers: Dispatchers) : ViewModel(), AsyncLoader {
@@ -13,7 +15,11 @@ constructor(protected val dispatchers: Dispatchers) : ViewModel(), AsyncLoader {
     protected val viewModelCallbackStore = ViewModelLifecycleCallback<T>()
 
     fun startLoad() {
-        launchAsync { loadBackground() }
+        launchAsync {
+            postLoading(Visibility.Visible)
+            loadBackground()
+            postLoading(Visibility.Gone)
+        }
     }
 
     override fun launchAsync(block: suspend CoroutineScope.() -> Unit) {
@@ -33,5 +39,11 @@ constructor(protected val dispatchers: Dispatchers) : ViewModel(), AsyncLoader {
     override fun onCleared() {
         super.onCleared()
         viewModelCallbackStore.clear()
+    }
+
+    protected open suspend fun postLoading(visibility: Visibility) {
+        dispatchers.changeToUi {
+            viewModelCallbackStore.getCallback()?.drawLoading(visibility)
+        }
     }
 }

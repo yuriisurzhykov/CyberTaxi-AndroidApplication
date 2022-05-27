@@ -1,4 +1,4 @@
-package com.cybertaxi.core.list
+package com.cybertaxi.mobile.presentation.base.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,13 +12,12 @@ class BaseViewHolderFactory<VH : RecyclerView.ViewHolder>(
 
     override fun create(clazz: KClass<VH>, parent: ViewGroup, viewType: Int): VH {
         if (clazz.java.isAnnotationPresent(ViewHolder::class.java)) {
-            val annotation =
-                clazz.annotations.find { it is ViewHolder } as? ViewHolder
-            if (annotation != null) {
-                val view = inflater.inflate(annotation.layoutRes, parent, false)
+            val annot = clazz.java.annotations.find { it is ViewHolder } as? ViewHolder
+            if (annot != null) {
+                val view = inflater.inflate(annot.layoutRes, parent, false)
                 return clazz.java.getConstructor(View::class.java).newInstance(view)
             }
         }
-        throw IllegalArgumentException("Illegal class $clazz! You must to annotate it with @ViewHolder annotation!")
+        throw IllegalArgumentException("Illegal $clazz! You must to annotate it with @ViewHolder annotation!")
     }
 }

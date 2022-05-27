@@ -7,5 +7,5 @@ import dagger.Module
 abstract class LibraryModule {
 
     @Binds
-    abstract fun provideDispatchers(): Dispatchers
+    abstract fun provideDispatchers(dispatchers: Dispatchers.Base): Dispatchers
 }

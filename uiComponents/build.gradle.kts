@@ -40,4 +40,5 @@ dependencies {
     api(Deps.DI.dagger)
     api(Deps.UI.fragments)
     api(project(LocalDeps.core))
+    api(Deps.DI.hilt)
 }

@@ -1,3 +1,7 @@
 package com.cybertaxi.uicomponents.viewmodels
 
-interface IView
+import com.cybertaxi.uicomponents.views.Visibility
+
+interface IView {
+    fun drawLoading(visibility: Visibility)
+}
