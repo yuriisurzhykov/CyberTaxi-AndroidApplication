@@ -39,4 +39,5 @@ dependencies {
     api(Deps.UI.appCompat)
     api(Deps.UI.material)
     testImplementation(Testing.Unit.junit)
+    implementation(kotlin("reflect"))
 }
