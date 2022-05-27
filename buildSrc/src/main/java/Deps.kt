@@ -39,5 +39,6 @@ object Deps {
 
     object DI {
         val dagger by lazy { "com.google.dagger:dagger:${Versions.dagger}" }
+        val hilt by lazy { "com.google.dagger:hilt-android:${Versions.hilt}" }
     }
 }

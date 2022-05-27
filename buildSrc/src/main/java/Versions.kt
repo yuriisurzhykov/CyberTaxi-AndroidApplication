@@ -20,4 +20,5 @@ object Versions {
     val androidCore by lazy { "1.7.0" }
     val googleBoom by lazy { "30.0.1" }
     val dagger by lazy { "2.42" }
+    val hilt by lazy { dagger }
 }
