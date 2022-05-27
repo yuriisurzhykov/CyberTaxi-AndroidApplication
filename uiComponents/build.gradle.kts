@@ -38,5 +38,6 @@ dependencies {
     api(Deps.UI.appCompat)
     api(Deps.Domain.viewModel)
     api(Deps.DI.dagger)
+    api(Deps.UI.fragments)
     api(project(LocalDeps.core))
 }
