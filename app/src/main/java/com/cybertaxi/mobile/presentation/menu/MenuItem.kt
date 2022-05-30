@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.menu
+package com.cybertaxi.mobile.presentation.menu
 
 data class MenuItem(
     val title: String,

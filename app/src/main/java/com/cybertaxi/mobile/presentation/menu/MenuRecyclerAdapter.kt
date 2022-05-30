@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.menu
+package com.cybertaxi.mobile.presentation.menu
 
 import androidx.recyclerview.widget.DiffUtil
 import com.cybertaxi.mobile.presentation.base.list.AbstractRecyclerAdapter

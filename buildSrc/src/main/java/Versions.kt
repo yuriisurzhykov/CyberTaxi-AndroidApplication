@@ -21,4 +21,8 @@ object Versions {
     val googleBoom by lazy { "30.0.1" }
     val dagger by lazy { "2.42" }
     val hilt by lazy { dagger }
+    val googleMaps by lazy { "18.0.2" }
+
+    val glide by lazy { "4.13.0" }
+    val coil by lazy { "2.1.0" }
 }

@@ -12,9 +12,9 @@ class BaseViewHolderFactory<VH : RecyclerView.ViewHolder>(
 
     override fun create(clazz: KClass<VH>, parent: ViewGroup, viewType: Int): VH {
         if (clazz.java.isAnnotationPresent(ViewHolder::class.java)) {
-            val annot = clazz.java.annotations.find { it is ViewHolder } as? ViewHolder
-            if (annot != null) {
-                val view = inflater.inflate(annot.layoutRes, parent, false)
+            val annotation = clazz.java.annotations.find { it is ViewHolder } as? ViewHolder
+            if (annotation != null) {
+                val view = inflater.inflate(annotation.layoutRes, parent, false)
                 return clazz.java.getConstructor(View::class.java).newInstance(view)
             }
         }

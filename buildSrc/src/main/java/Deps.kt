@@ -29,12 +29,15 @@ object Deps {
         val constraintLayoutCompose by lazy { "androidx.constraintlayout:constraintlayout-compose:${Versions.constraintLayoutCompose}" }
         val navigationFragment by lazy { "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}" }
         val navigationUi by lazy { "androidx.navigation:navigation-ui-ktx:${Versions.navigation}" }
+        val glide by lazy { "com.github.bumptech.glide:glide:${Versions.glide}" }
+        val coil by lazy { "io.coil-kt:coil:${Versions.coil}" }
     }
 
 
     object GMS {
         val analytics by lazy { "com.google.firebase:firebase-analytics" }
         val firestore by lazy { "com.google.firebase:firebase-firestore-ktx" }
+        val maps by lazy { "com.google.android.gms:play-services-maps:${Versions.googleMaps}" }
     }
 
     object DI {

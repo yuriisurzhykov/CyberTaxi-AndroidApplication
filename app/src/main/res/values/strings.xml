@@ -13,4 +13,6 @@
     <string name="label_firstname_input_description">Your first name</string>
     <string name="label_second_name_input_description">Your second name</string>
     <string name="label_birthday_input_description">Your birthday</string>
+    <string name="title_trip_variant">Trip variant</string>
+    <string name="title_recent_trips">Recent trips</string>
 </resources>

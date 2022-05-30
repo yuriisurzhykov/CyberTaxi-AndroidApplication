@@ -7,17 +7,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cybertaxi.mobile.R
 import com.cybertaxi.mobile.domain.model.TripVariant
-import com.cybertaxi.uicomponents.fragments.BaseViewModelBottomSheetFragment
+import com.cybertaxi.mobile.presentation.menu.MenuRecyclerAdapter
+import com.cybertaxi.mobile.presentation.menu.holder.TripTypeViewHolder
+import com.cybertaxi.mobile.presentation.base.AbstractFragment
 import com.cybertaxi.uicomponents.views.SpaceItemDecoration
 import com.cybertaxi.uicomponents.views.Visibility
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainMenuBottomSheetFragment : BaseViewModelBottomSheetFragment<IMainView, MainViewModel>() {
+class MainMenuFragment : AbstractFragment<IMainView, MainViewModel>() {
 
     private val localViewModel: MainViewModel by viewModels()
+
     override val layoutRes: Int
-        get() = R.layout.fragment_main_bottom_sheet
+        get() = R.layout.fragment_main_menu
+
     override val viewModelView: IMainView
         get() = viewInternal
 

@@ -16,7 +16,10 @@ object ProjectDepsProvider : DependenciesProvider {
             Deps.DI.hilt,
             Deps.UI.material,
             Deps.UI.appCompat,
-            Deps.UI.constraintLayout
+            Deps.UI.constraintLayout,
+            Deps.UI.coil,
+            Deps.GMS.analytics,
+            Deps.GMS.maps
         )
     }
 }
@@ -58,7 +61,7 @@ object ProjectPlatformDepsProvider : DependenciesProvider {
     }
 }
 
-object LocalProjectsProvider: DependenciesProvider {
+object LocalProjectsProvider : DependenciesProvider {
     override fun dependenciesList(): List<String> {
         return arrayListOf(":uiComponents", ":core")
     }

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.reflect.KClass
 
-abstract class AbstractRecyclerAdapter<T, VH : AbstractViewHolder<T>>(private val clazz: KClass<VH>) :
+abstract class AbstractRecyclerAdapter<T, VH : AbstractViewHolder<T>>(private val holderClass: KClass<VH>) :
     RecyclerView.Adapter<VH>() {
 
     private val dataList = mutableListOf<T>()
@@ -28,7 +28,7 @@ abstract class AbstractRecyclerAdapter<T, VH : AbstractViewHolder<T>>(private va
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        return BaseViewHolderFactory<VH>(layoutInflater(parent.context)).create(clazz, parent, viewType)
+        return BaseViewHolderFactory<VH>(layoutInflater(parent.context)).create(holderClass, parent, viewType)
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {

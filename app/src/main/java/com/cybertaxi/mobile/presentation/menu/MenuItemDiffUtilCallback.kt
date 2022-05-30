@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.menu
+package com.cybertaxi.mobile.presentation.menu
 
 import com.cybertaxi.mobile.presentation.base.AbstractDiffUtilCallback
 
