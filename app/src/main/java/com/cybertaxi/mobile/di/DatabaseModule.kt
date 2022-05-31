@@ -2,6 +2,7 @@ package com.cybertaxi.mobile.di
 
 import android.content.Context
 import com.cybertaxi.mobile.data.cache.LocalDatabase
+import com.cybertaxi.mobile.data.cache.auth.UserTokensDao
 import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
 import dagger.Module
 import dagger.Provides
@@ -24,5 +25,11 @@ object DatabaseModule {
     @Singleton
     fun provideTripVariantsDao(database: LocalDatabase): TripVariantsDao {
         return database.tripVariantsDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserTokenDao(database: LocalDatabase): UserTokensDao {
+        return database.tokensDao()
     }
 }

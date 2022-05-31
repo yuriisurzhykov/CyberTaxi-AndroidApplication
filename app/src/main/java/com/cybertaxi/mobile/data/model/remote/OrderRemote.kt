@@ -11,5 +11,6 @@ data class OrderRemote(
     val taxiType: TaxiTypeRemote,
     val tripType: TripVariantRemote,
     val currency: String,
-    val state: OrderStateRemote
+    val state: OrderStateRemote,
+    val payCard: PayCardRemote
 )
