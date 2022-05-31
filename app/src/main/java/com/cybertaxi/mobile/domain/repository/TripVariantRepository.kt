@@ -2,10 +2,10 @@ package com.cybertaxi.mobile.domain.repository
 
 import com.cybertaxi.core.Mapper
 import com.cybertaxi.mobile.data.UserPreferences
-import com.cybertaxi.mobile.data.cache.TripVariantsDao
+import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
 import com.cybertaxi.mobile.data.model.local.TripVariantLocal
 import com.cybertaxi.mobile.data.model.remote.TripVariantRemote
-import com.cybertaxi.mobile.data.network.TripVariantsApi
+import com.cybertaxi.mobile.data.network.trips.TripVariantsApi
 import com.cybertaxi.mobile.domain.base.Repository
 import com.cybertaxi.mobile.domain.model.TripVariant
 import kotlinx.coroutines.Dispatchers

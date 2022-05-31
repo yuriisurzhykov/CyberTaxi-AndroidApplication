@@ -2,7 +2,7 @@ package com.cybertaxi.mobile.di
 
 import android.content.Context
 import com.cybertaxi.mobile.data.cache.LocalDatabase
-import com.cybertaxi.mobile.data.cache.TripVariantsDao
+import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

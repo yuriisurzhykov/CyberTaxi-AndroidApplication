@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.data.cache
+package com.cybertaxi.mobile.data.cache.trips
 
 import androidx.room.*
 import com.cybertaxi.mobile.data.model.local.TripVariantLocal

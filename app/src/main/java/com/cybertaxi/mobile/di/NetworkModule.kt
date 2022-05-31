@@ -3,7 +3,7 @@ package com.cybertaxi.mobile.di
 import android.content.Context
 import com.cybertaxi.mobile.data.UserPreferences
 import com.cybertaxi.mobile.data.network.HeaderInterceptor
-import com.cybertaxi.mobile.data.network.TripVariantsApi
+import com.cybertaxi.mobile.data.network.trips.TripVariantsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.data.network
+package com.cybertaxi.mobile.data.network.trips
 
 import com.cybertaxi.mobile.data.model.remote.TripVariantRemote
 import retrofit2.Call
