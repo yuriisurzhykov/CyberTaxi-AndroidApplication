@@ -26,13 +26,13 @@ constructor(
 ) : Repository<List<TripVariant>>() {
 
     override suspend fun fetchLocal(): Flow<List<TripVariant>> {
-        return tripVariantsDao.fetchTripVariants(userPreferences.locale()).map { localList ->
+        return tripVariantsDao.fetchTripVariants(userPreferences.locale().language).map { localList ->
             localList.map { localTripVariantMapper.map(it) }
         }
     }
 
     override suspend fun fetchRemote() = flow {
-        val result = tripVariantsApi.fetchTripVariants(userPreferences.locale()).execute()
+        val result = tripVariantsApi.fetchTripVariants().execute()
         if (result.isSuccessful) {
             emit(result.body().orEmpty().map { remoteTripVariantMapper.map(it) })
         } else {

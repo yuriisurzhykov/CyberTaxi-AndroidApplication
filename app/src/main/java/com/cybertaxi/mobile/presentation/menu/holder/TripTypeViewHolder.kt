@@ -7,10 +7,8 @@ import android.widget.TextView
 import coil.load
 import com.cybertaxi.mobile.R
 import com.cybertaxi.mobile.domain.model.TripVariant
-import com.cybertaxi.mobile.presentation.ImageResource
 import com.cybertaxi.mobile.presentation.base.list.AbstractViewHolder
 import com.cybertaxi.mobile.presentation.base.list.ViewHolder
-import com.cybertaxi.mobile.presentation.menu.MenuItem
 
 @SuppressLint("NonConstantResourceId")
 @ViewHolder(layoutRes = R.layout.list_item_trip_type)

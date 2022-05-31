@@ -8,6 +8,6 @@ import retrofit2.http.Query
 interface TripVariantsApi {
 
     @GET("/trips/variants")
-    suspend fun fetchTripVariants(@Query("lang") language: String): Call<List<TripVariantRemote>>
+    suspend fun fetchTripVariants(): Call<List<TripVariantRemote>>
 
 }

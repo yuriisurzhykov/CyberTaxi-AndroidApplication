@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 data class TripVariantLocal(
     @PrimaryKey(autoGenerate = true)
     val tripVariantId: Int,
-    val title: String?,
-    val language: String?,
+    val title: String,
+    val language: String,
     val backgroundColor: Int,
-    val iconUrl: String?
+    val iconUrl: String
 )

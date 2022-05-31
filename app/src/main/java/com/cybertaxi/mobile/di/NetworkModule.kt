@@ -18,7 +18,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL = "http://cybertaxi-server.com"
+    private const val BASE_HTTP_URL = "http://cybertaxi-server.com"
+    private const val BASE_WSS_URL = "ws://cybertaxi-server.com"
 
     @Provides
     @Singleton
@@ -39,7 +40,7 @@ object NetworkModule {
     @Provides
     fun retrofit(@ApplicationContext context: Context, client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_HTTP_URL)
             .client(client)
             .build()
     }
