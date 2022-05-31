@@ -5,7 +5,7 @@ data class UserRemote(
     val orders: List<OrderRemote>,
     val phoneNumber: String,
     val birthday: String,
-    val cards: List<PayCardRemote>,
+    val cards: List<PaymentCardRemote>,
     val firstName: String,
     val secondName: String,
     val preferredLanguage: String,

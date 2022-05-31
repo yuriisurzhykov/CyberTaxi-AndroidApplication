@@ -6,7 +6,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.cybertaxi.mobile.data.cache.auth.UserTokensDao
+import com.cybertaxi.mobile.data.cache.countries.CountriesDao
 import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
+import com.cybertaxi.mobile.data.cache.trips.TripsCancellationReasonDao
 import com.cybertaxi.mobile.data.model.local.*
 
 @Database(
@@ -26,6 +28,10 @@ abstract class LocalDatabase : RoomDatabase() {
     abstract fun tripVariantsDao(): TripVariantsDao
 
     abstract fun tokensDao(): UserTokensDao
+
+    abstract fun countriesDao(): CountriesDao
+
+    abstract fun tripCancellationReasonDao(): TripsCancellationReasonDao
 
     companion object {
         @Volatile

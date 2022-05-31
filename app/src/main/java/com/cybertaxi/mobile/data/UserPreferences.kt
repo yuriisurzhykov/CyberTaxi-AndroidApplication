@@ -15,4 +15,8 @@ interface DevicePreferences {
     fun deviceType(): String
 }
 
+interface UserSessionInfo {
+    fun isUserLogged(): Boolean
+}
+
 interface UserPreferences : DevicePreferences, TokenPreferences, LocalePreferences

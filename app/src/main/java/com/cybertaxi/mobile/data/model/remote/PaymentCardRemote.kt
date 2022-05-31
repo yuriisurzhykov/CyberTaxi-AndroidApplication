@@ -3,7 +3,7 @@ package com.cybertaxi.mobile.data.model.remote
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class PayCardRemote(
+data class PaymentCardRemote(
     val remoteId: String,
     val cardPan: String,
     val cardExpiry: String,

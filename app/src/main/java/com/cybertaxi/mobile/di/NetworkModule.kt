@@ -3,7 +3,9 @@ package com.cybertaxi.mobile.di
 import android.content.Context
 import com.cybertaxi.mobile.data.UserPreferences
 import com.cybertaxi.mobile.data.network.HeaderInterceptor
-import com.cybertaxi.mobile.data.network.trips.TripVariantsApi
+import com.cybertaxi.mobile.data.network.countries.CountriesApi
+import com.cybertaxi.mobile.data.network.trips.TripsCancellationApi
+import com.cybertaxi.mobile.data.network.trips.TripsVariantsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,7 +49,19 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideTripVariantsApi(retrofit: Retrofit): TripVariantsApi {
-        return retrofit.create(TripVariantsApi::class.java)
+    fun provideTripVariantsApi(retrofit: Retrofit): TripsVariantsApi {
+        return retrofit.create(TripsVariantsApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTripCancellationApi(retrofit: Retrofit): TripsCancellationApi {
+        return retrofit.create(TripsCancellationApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCountriesApi(retrofit: Retrofit): CountriesApi {
+        return retrofit.create(CountriesApi::class.java)
     }
 }

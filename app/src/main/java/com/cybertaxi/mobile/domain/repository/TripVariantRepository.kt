@@ -5,7 +5,7 @@ import com.cybertaxi.mobile.data.UserPreferences
 import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
 import com.cybertaxi.mobile.data.model.local.TripVariantLocal
 import com.cybertaxi.mobile.data.model.remote.TripVariantRemote
-import com.cybertaxi.mobile.data.network.trips.TripVariantsApi
+import com.cybertaxi.mobile.data.network.trips.TripsVariantsApi
 import com.cybertaxi.mobile.domain.base.Repository
 import com.cybertaxi.mobile.domain.model.TripVariant
 import kotlinx.coroutines.Dispatchers
@@ -19,7 +19,7 @@ class TripVariantRepository
 @Inject
 constructor(
     private val tripVariantsDao: TripVariantsDao,
-    private val tripVariantsApi: TripVariantsApi,
+    private val tripsVariantsApi: TripsVariantsApi,
     private val userPreferences: UserPreferences,
     private val localTripVariantMapper: Mapper<TripVariantLocal, TripVariant>,
     private val remoteTripVariantMapper: Mapper<TripVariantRemote, TripVariant>
@@ -32,7 +32,7 @@ constructor(
     }
 
     override suspend fun fetchRemote() = flow {
-        val result = tripVariantsApi.fetchTripVariants().execute()
+        val result = tripsVariantsApi.fetchTripVariants().execute()
         if (result.isSuccessful) {
             emit(result.body().orEmpty().map { remoteTripVariantMapper.map(it) })
         } else {

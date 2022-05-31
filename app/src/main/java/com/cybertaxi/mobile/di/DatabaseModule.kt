@@ -3,7 +3,9 @@ package com.cybertaxi.mobile.di
 import android.content.Context
 import com.cybertaxi.mobile.data.cache.LocalDatabase
 import com.cybertaxi.mobile.data.cache.auth.UserTokensDao
+import com.cybertaxi.mobile.data.cache.countries.CountriesDao
 import com.cybertaxi.mobile.data.cache.trips.TripVariantsDao
+import com.cybertaxi.mobile.data.cache.trips.TripsCancellationReasonDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,5 +33,17 @@ object DatabaseModule {
     @Singleton
     fun provideUserTokenDao(database: LocalDatabase): UserTokensDao {
         return database.tokensDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideCountriesDao(database: LocalDatabase): CountriesDao {
+        return database.countriesDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTripsCancellationReasonDao(database: LocalDatabase): TripsCancellationReasonDao {
+        return database.tripCancellationReasonDao()
     }
 }
