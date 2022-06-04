@@ -1,8 +1,22 @@
 package com.cybertaxi.mobile.data
 
-interface UserPreferences {
-    fun language(): String
-    fun accessToken(): String
-    fun deviceType(): String
-    fun deviceId(): String
+import java.util.*
+
+interface LocalePreferences {
+    fun locale(): Locale
 }
+
+interface TokenPreferences {
+    fun accessToken(): String
+}
+
+interface DevicePreferences {
+    fun deviceId(): String
+    fun deviceType(): String
+}
+
+interface UserSessionInfo {
+    fun isUserLogged(): Boolean
+}
+
+interface UserPreferences : DevicePreferences, TokenPreferences, LocalePreferences

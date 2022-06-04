@@ -1,4 +1,4 @@
-package com.cybertaxi.mobile.data.model.remote
+package com.cybertaxi.mobile.data.model.common
 
 import kotlinx.serialization.Serializable
 

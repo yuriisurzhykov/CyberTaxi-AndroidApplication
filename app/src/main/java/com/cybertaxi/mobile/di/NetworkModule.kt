@@ -3,7 +3,9 @@ package com.cybertaxi.mobile.di
 import android.content.Context
 import com.cybertaxi.mobile.data.UserPreferences
 import com.cybertaxi.mobile.data.network.HeaderInterceptor
-import com.cybertaxi.mobile.data.network.trips.TripVariantsApi
+import com.cybertaxi.mobile.data.network.countries.CountriesApi
+import com.cybertaxi.mobile.data.network.trips.TripsCancellationApi
+import com.cybertaxi.mobile.data.network.trips.TripsVariantsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +20,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL = "http://cybertaxi-server.com"
+    private const val BASE_HTTP_URL = "http://cybertaxi-server.com"
+    private const val BASE_WSS_URL = "ws://cybertaxi-server.com"
 
     @Provides
     @Singleton
@@ -39,14 +42,26 @@ object NetworkModule {
     @Provides
     fun retrofit(@ApplicationContext context: Context, client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_HTTP_URL)
             .client(client)
             .build()
     }
 
     @Provides
     @Singleton
-    fun provideTripVariantsApi(retrofit: Retrofit): TripVariantsApi {
-        return retrofit.create(TripVariantsApi::class.java)
+    fun provideTripVariantsApi(retrofit: Retrofit): TripsVariantsApi {
+        return retrofit.create(TripsVariantsApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTripCancellationApi(retrofit: Retrofit): TripsCancellationApi {
+        return retrofit.create(TripsCancellationApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCountriesApi(retrofit: Retrofit): CountriesApi {
+        return retrofit.create(CountriesApi::class.java)
     }
 }
