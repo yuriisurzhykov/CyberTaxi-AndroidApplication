@@ -19,6 +19,7 @@ object ProjectDepsProvider : DependenciesProvider {
             Deps.UI.constraintLayout,
             Deps.UI.coil,
             Deps.GMS.analytics,
+            Deps.GMS.messaging,
             Deps.GMS.maps
         )
     }

@@ -8,6 +8,7 @@ buildscript {
         classpath(BuildPlugins.kotlinGradlePlugin)
         classpath(BuildPlugins.hiltPlugin)
         classpath(BuildPlugins.mapsSecretsPlugin)
+        classpath("com.google.gms:google-services:4.3.10")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
     }
 }
