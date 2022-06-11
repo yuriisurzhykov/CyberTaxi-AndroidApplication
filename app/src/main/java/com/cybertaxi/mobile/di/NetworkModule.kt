@@ -4,6 +4,7 @@ import android.content.Context
 import com.cybertaxi.mobile.data.UserPreferences
 import com.cybertaxi.mobile.data.network.HeaderInterceptor
 import com.cybertaxi.mobile.data.network.countries.CountriesApi
+import com.cybertaxi.mobile.data.network.messaging.PushTokenApi
 import com.cybertaxi.mobile.data.network.trips.TripsCancellationApi
 import com.cybertaxi.mobile.data.network.trips.TripsVariantsApi
 import dagger.Module
@@ -63,5 +64,11 @@ object NetworkModule {
     @Singleton
     fun provideCountriesApi(retrofit: Retrofit): CountriesApi {
         return retrofit.create(CountriesApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providePushTokenApi(retrofit: Retrofit): PushTokenApi {
+        return retrofit.create(PushTokenApi::class.java)
     }
 }

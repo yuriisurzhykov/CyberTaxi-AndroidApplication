@@ -37,6 +37,7 @@ object Deps {
     object GMS {
         val analytics by lazy { "com.google.firebase:firebase-analytics" }
         val firestore by lazy { "com.google.firebase:firebase-firestore-ktx" }
+        val messaging by lazy { "com.google.firebase:firebase-messaging-ktx:23.0.5" }
         val maps by lazy { "com.google.android.gms:play-services-maps:${Versions.googleMaps}" }
     }
 
